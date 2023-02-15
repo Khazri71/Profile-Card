@@ -1,0 +1,110 @@
+/*Variables*/
+:root {
+  --main-background-color: hsl(185, 75%, 39%);
+  --main-heading-color: hsl(229, 23%, 23%);
+  --main-info-color: hsl(227, 10%, 46%);
+  --main-stats-span-color: hsl(0, 0%, 59%);
+  --main-background-card-color: #fff;
+}
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html {
+  font-size: 18px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-background-color);
+  position: relative;
+  overflow: hidden;
+}
+body::before {
+  position: absolute;
+  content: url("images/bg-pattern-top.svg");
+  left: -250px;
+  top: -500px;
+  z-index: -1;
+}
+body::after {
+  position: absolute;
+  content: url("images/bg-pattern-bottom.svg");
+  z-index: -1;
+  right: -250px;
+  bottom: -500px;
+}
+main {
+  background-color: var(--main-background-card-color);
+  border-radius: 15px;
+  width: 350px;
+  height: 390px;
+}
+section:first-of-type {
+  width: 100%;
+  height: 140px;
+  background-image: url("images/bg-pattern-card.svg");
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  position: relative;
+}
+section:first-of-type img {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 6px solid var(--main-background-card-color);
+}
+section:nth-of-type(2) {
+  padding: 60px 0;
+  height: 140px;
+  text-align: center;
+  font-size: 1rem;
+}
+section:nth-of-type(2) h1 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--main-heading-color);
+}
+section:nth-of-type(2) h1 span {
+  font-weight: normal;
+  color: var(--main-info-color);
+}
+section:nth-of-type(2) p {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  color: var(--main-info-color);
+  margin-bottom: 20px;
+}
+hr {
+  width: 100%;
+  color: var(--main-stats-span-color);
+}
+section:last-of-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px 0;
+  font-size: 1rem;
+}
+section:last-of-type .stat {
+  text-align: center;
+}
+section:last-of-type .stat h2 {
+  font-size: 1.2rem;
+  color: var(--main-heading-color);
+}
+section:last-of-type .stat span {
+  font-size: 0.6rem;
+  color: var(--main-stats-span-color);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
